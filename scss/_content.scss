@@ -1,0 +1,268 @@
+// ::selection {
+	
+// }
+// ::-moz-selection {
+	
+// }
+body,html{
+	overflow-y: scroll;
+overflow-x: hidden;
+position: relative;
+}
+*{
+	box-sizing: border-box;
+}
+.ballCover{
+	margin-top: -5px;
+	img{
+		position: absolute;
+	}
+	.l_ball-top1{
+		left: -180px;
+		top: -90px
+	}
+	.l_ball-top2{
+		left: -70px;
+		top: 80px;
+	}
+	.r_ball-top{
+		right: -20px;
+		top: -20px
+	}
+	.r_ball-bot{
+		right: -70px;
+		top: 250px;
+		width: 220px;
+	}
+	.r_squ{
+		right: 90px;
+		top: 80px;
+	}
+	.r_line{
+		right: -90px;
+		top: -290px;
+	}
+	.l_line{
+		left: -60px;
+		top: 500px;
+	}
+	.l_ball-bot{
+		left: 30px;
+		top: 600px;
+	}
+	.bt{
+		&-1{
+			width: 123px;
+			left: -50px;
+			top: 0;
+		}
+		&-2{
+			width: 160px;
+			right: -50px;
+			top: 700px;
+		}
+		&-3{
+			width: 145px;
+			left: 20px;
+			top: 1200px;
+		}
+	}
+}
+.hero{
+	>img:first-child{
+		width: 360px;
+		position: relative;
+		z-index: 9;
+		@include rwd($pad){
+			width: 40%;
+		}
+	}
+	&__titlePC{
+		width: 600px;
+		max-width: 600px;
+		height: 290px;
+		@include rwd($pad){
+			display: none;
+		}
+	}
+	&__titleMB{
+		display: none;
+		width: 85%;
+		height: auto;
+		@include rwd($pad){
+			display: block;
+		}
+	}
+	&__row{
+		width: 80vw;
+		position: relative;
+		@include df_center(row);
+		img{
+			margin: 0 auto;
+		}
+		.googlerow{
+			position: absolute;
+			right: 0;
+		}
+		@include rwd(920px){
+			width: 100%;
+			@include df_center(column);
+			.googlerow{
+				position: static;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+// sec1END
+.about{
+	margin: 0 auto;
+	width: 74vw;
+	@include df_center(row);
+	justify-content: space-around;
+	&__left{
+		width: 26vw;
+		height: 26vw;
+		margin-right: 4vw;
+		// background:$primary;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			height: 100%;
+			border-right: 4px solid $dark;
+			position: absolute;
+			top: 0;
+			right: -2vw;
+		}
+	}
+	&__right{
+		width: 44vw;
+	}
+	@include rwd($pad){
+		width: 85vw;
+		@include df_center(column);
+		justify-content: center;
+		&__left{
+			width: 55vw;
+			height: 55vw;
+			margin-right: 0;
+			margin-bottom: 20px;
+			position: static;
+			&:after{
+				display: none;
+			}
+		}
+		&__right{
+			width: 95%;
+			margin-left: 3%;
+			position: relative;
+			&:before{
+				content: '';
+				display: block;
+				height: 100%;
+				border-left: 4px solid $dark;
+				position: absolute;
+				top: 0;
+				left: -7%;
+			}
+		}
+	}
+}
+// sec2END
+.title{
+	padding: 2px;
+	border: 3px solid $primary;
+}
+.info{
+	margin: 0 auto;
+	width: 80vw;
+	@include df_center(column)
+	.about{
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+	.about__left{
+		&:after{
+			border-right: 4px solid $primary;
+		}
+	}
+	@include rwd($pad){
+		.about{
+			&__right:before{
+				border-left: 4px solid $primary;
+			}
+		}
+	}
+}
+.schedule{
+	position: relative;
+	z-index: 9;
+	@include rwd($pad){
+		width: 95vw;
+		margin: 0 auto;
+		text-align: center;
+		.h5{
+			font-size: 14px;
+		}
+	}
+}
+
+.signup{
+	width: 48vw;
+	max-width: 700px;
+	margin: 0 auto;
+	border-radius: 20px;
+	form{
+		width: 70%;
+		max-width: 1080px;
+		label{
+			font-size: 14px;
+			letter-spacing: 1px;
+			text-align: left;
+			display: block;
+			margin-bottom: 4px;
+			margin-top: 30px;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		input{
+			outline: 0;
+			width: 100%;
+			height: 25px;
+			border: 0px solid #000;
+			border-bottom: 1px solid $gray;
+			&:last-child{
+				padding: 8px;
+				display: block;
+				margin: 10px auto;
+				border: 1px solid rgba($primary,0);
+				background-image: $orange-linear;
+				color: #fff;
+				font-size: 16px;
+				letter-spacing: 2px;
+				width: 50%;
+				height: auto;
+				border-radius: 40px;
+			}
+		}
+		select{
+			width: 100%;
+			border: 0px solid #000;
+			border-bottom: 1px solid $gray;
+		}
+	}
+	@include rwd($pad){
+		width: 90vw;
+		input:last-child{
+			width: 80% !important;
+		}
+	}
+}
+// sec3END
+footer{
+	position: relative;
+	z-index: 9;
+}

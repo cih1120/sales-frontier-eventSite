@@ -1,0 +1,36 @@
+.float-left{
+	float:left;
+}
+.float-right{
+	float:right;
+}
+.float-clear{
+	&::after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+// float
+.d-flex{
+	display: flex;
+}
+.d-block{
+	display: block;
+}
+.mb-d-none{
+	@include rwd($mobile){
+		display: none;
+	}
+}
+// display
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+// position
+.ovh{
+	overflow: hidden;
+}

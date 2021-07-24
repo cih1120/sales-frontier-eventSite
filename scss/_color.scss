@@ -1,0 +1,29 @@
+$black:#1B1B1E;
+$primary:#EEC34E;
+$dark:#4A4A4A ;
+$gray:#CECECE ;
+$orange-linear: linear-gradient(-90deg, #EEEEEE 0%, #F78A1D 0%, #FDB034 100%);
+$blue-linear: linear-gradient(180deg, #133966 0%, #3674CB 100%);
+$dark-blue: #182A46;
+
+.bg-primary{
+    background-color: $primary;
+}
+.bg-white{
+    background-color: #fff;
+}
+.bg-gray{
+    background-color: $gray;
+}
+.bg-dark{
+    background-color: $dark;
+}
+.bg-darkBl{
+    background-color: $dark-blue;
+}
+.bg-linear-og{
+    background-image: $orange-linear;
+}
+.bg-linear-bl{
+    background-image: $blue-linear;
+}
